@@ -5,9 +5,72 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-gap: 1px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background: lightgray;
+  border: 1px solid white;
+}
+
+.cell.filled {
+  background: blue;
+}
+
+.mobileButtons {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .mobileButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .middleButtons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobileControlButton {
+
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
